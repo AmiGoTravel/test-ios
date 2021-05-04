@@ -1,0 +1,598 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		04579D432640D16000E8A39F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D422640D16000E8A39F /* AppDelegate.swift */; };
+		04579D452640D16000E8A39F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D442640D16000E8A39F /* SceneDelegate.swift */; };
+		04579D472640D16000E8A39F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D462640D16000E8A39F /* ViewController.swift */; };
+		04579D4A2640D16000E8A39F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04579D482640D16000E8A39F /* Main.storyboard */; };
+		04579D4C2640D16300E8A39F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04579D4B2640D16300E8A39F /* Assets.xcassets */; };
+		04579D4F2640D16300E8A39F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04579D4D2640D16300E8A39F /* LaunchScreen.storyboard */; };
+		04579D5A2640D16300E8A39F /* RedditAmiGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D592640D16300E8A39F /* RedditAmiGoTests.swift */; };
+		04579D652640D16300E8A39F /* RedditAmiGoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D642640D16300E8A39F /* RedditAmiGoUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		04579D562640D16300E8A39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04579D372640D16000E8A39F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04579D3E2640D16000E8A39F;
+			remoteInfo = RedditAmiGo;
+		};
+		04579D612640D16300E8A39F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 04579D372640D16000E8A39F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 04579D3E2640D16000E8A39F;
+			remoteInfo = RedditAmiGo;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		04579D3F2640D16000E8A39F /* RedditAmiGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RedditAmiGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		04579D422640D16000E8A39F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		04579D442640D16000E8A39F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		04579D462640D16000E8A39F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		04579D492640D16000E8A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		04579D4B2640D16300E8A39F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		04579D4E2640D16300E8A39F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		04579D502640D16300E8A39F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04579D552640D16300E8A39F /* RedditAmiGoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditAmiGoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04579D592640D16300E8A39F /* RedditAmiGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAmiGoTests.swift; sourceTree = "<group>"; };
+		04579D5B2640D16300E8A39F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		04579D602640D16300E8A39F /* RedditAmiGoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RedditAmiGoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		04579D642640D16300E8A39F /* RedditAmiGoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RedditAmiGoUITests.swift; sourceTree = "<group>"; };
+		04579D662640D16300E8A39F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		04579D3C2640D16000E8A39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D522640D16300E8A39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D5D2640D16300E8A39F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04579D362640D16000E8A39F = {
+			isa = PBXGroup;
+			children = (
+				04579D412640D16000E8A39F /* RedditAmiGo */,
+				04579D582640D16300E8A39F /* RedditAmiGoTests */,
+				04579D632640D16300E8A39F /* RedditAmiGoUITests */,
+				04579D402640D16000E8A39F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		04579D402640D16000E8A39F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				04579D3F2640D16000E8A39F /* RedditAmiGo.app */,
+				04579D552640D16300E8A39F /* RedditAmiGoTests.xctest */,
+				04579D602640D16300E8A39F /* RedditAmiGoUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		04579D412640D16000E8A39F /* RedditAmiGo */ = {
+			isa = PBXGroup;
+			children = (
+				04579D422640D16000E8A39F /* AppDelegate.swift */,
+				04579D442640D16000E8A39F /* SceneDelegate.swift */,
+				04579D462640D16000E8A39F /* ViewController.swift */,
+				04579D482640D16000E8A39F /* Main.storyboard */,
+				04579D4B2640D16300E8A39F /* Assets.xcassets */,
+				04579D4D2640D16300E8A39F /* LaunchScreen.storyboard */,
+				04579D502640D16300E8A39F /* Info.plist */,
+			);
+			path = RedditAmiGo;
+			sourceTree = "<group>";
+		};
+		04579D582640D16300E8A39F /* RedditAmiGoTests */ = {
+			isa = PBXGroup;
+			children = (
+				04579D592640D16300E8A39F /* RedditAmiGoTests.swift */,
+				04579D5B2640D16300E8A39F /* Info.plist */,
+			);
+			path = RedditAmiGoTests;
+			sourceTree = "<group>";
+		};
+		04579D632640D16300E8A39F /* RedditAmiGoUITests */ = {
+			isa = PBXGroup;
+			children = (
+				04579D642640D16300E8A39F /* RedditAmiGoUITests.swift */,
+				04579D662640D16300E8A39F /* Info.plist */,
+			);
+			path = RedditAmiGoUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		04579D3E2640D16000E8A39F /* RedditAmiGo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04579D692640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGo" */;
+			buildPhases = (
+				04579D3B2640D16000E8A39F /* Sources */,
+				04579D3C2640D16000E8A39F /* Frameworks */,
+				04579D3D2640D16000E8A39F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = RedditAmiGo;
+			productName = RedditAmiGo;
+			productReference = 04579D3F2640D16000E8A39F /* RedditAmiGo.app */;
+			productType = "com.apple.product-type.application";
+		};
+		04579D542640D16300E8A39F /* RedditAmiGoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04579D6C2640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGoTests" */;
+			buildPhases = (
+				04579D512640D16300E8A39F /* Sources */,
+				04579D522640D16300E8A39F /* Frameworks */,
+				04579D532640D16300E8A39F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04579D572640D16300E8A39F /* PBXTargetDependency */,
+			);
+			name = RedditAmiGoTests;
+			productName = RedditAmiGoTests;
+			productReference = 04579D552640D16300E8A39F /* RedditAmiGoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		04579D5F2640D16300E8A39F /* RedditAmiGoUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 04579D6F2640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGoUITests" */;
+			buildPhases = (
+				04579D5C2640D16300E8A39F /* Sources */,
+				04579D5D2640D16300E8A39F /* Frameworks */,
+				04579D5E2640D16300E8A39F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				04579D622640D16300E8A39F /* PBXTargetDependency */,
+			);
+			name = RedditAmiGoUITests;
+			productName = RedditAmiGoUITests;
+			productReference = 04579D602640D16300E8A39F /* RedditAmiGoUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		04579D372640D16000E8A39F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					04579D3E2640D16000E8A39F = {
+						CreatedOnToolsVersion = 12.4;
+					};
+					04579D542640D16300E8A39F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 04579D3E2640D16000E8A39F;
+					};
+					04579D5F2640D16300E8A39F = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 04579D3E2640D16000E8A39F;
+					};
+				};
+			};
+			buildConfigurationList = 04579D3A2640D16000E8A39F /* Build configuration list for PBXProject "RedditAmiGo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 04579D362640D16000E8A39F;
+			productRefGroup = 04579D402640D16000E8A39F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				04579D3E2640D16000E8A39F /* RedditAmiGo */,
+				04579D542640D16300E8A39F /* RedditAmiGoTests */,
+				04579D5F2640D16300E8A39F /* RedditAmiGoUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		04579D3D2640D16000E8A39F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04579D4F2640D16300E8A39F /* LaunchScreen.storyboard in Resources */,
+				04579D4C2640D16300E8A39F /* Assets.xcassets in Resources */,
+				04579D4A2640D16000E8A39F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D532640D16300E8A39F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D5E2640D16300E8A39F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		04579D3B2640D16000E8A39F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04579D472640D16000E8A39F /* ViewController.swift in Sources */,
+				04579D432640D16000E8A39F /* AppDelegate.swift in Sources */,
+				04579D452640D16000E8A39F /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D512640D16300E8A39F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04579D5A2640D16300E8A39F /* RedditAmiGoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		04579D5C2640D16300E8A39F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				04579D652640D16300E8A39F /* RedditAmiGoUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		04579D572640D16300E8A39F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04579D3E2640D16000E8A39F /* RedditAmiGo */;
+			targetProxy = 04579D562640D16300E8A39F /* PBXContainerItemProxy */;
+		};
+		04579D622640D16300E8A39F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 04579D3E2640D16000E8A39F /* RedditAmiGo */;
+			targetProxy = 04579D612640D16300E8A39F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		04579D482640D16000E8A39F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04579D492640D16000E8A39F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		04579D4D2640D16300E8A39F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				04579D4E2640D16300E8A39F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		04579D672640D16300E8A39F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		04579D682640D16300E8A39F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		04579D6A2640D16300E8A39F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		04579D6B2640D16300E8A39F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGo/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		04579D6D2640D16300E8A39F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedditAmiGo.app/RedditAmiGo";
+			};
+			name = Debug;
+		};
+		04579D6E2640D16300E8A39F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGoTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGoTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RedditAmiGo.app/RedditAmiGo";
+			};
+			name = Release;
+		};
+		04579D702640D16300E8A39F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedditAmiGo;
+			};
+			name = Debug;
+		};
+		04579D712640D16300E8A39F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = HQ726C768Z;
+				INFOPLIST_FILE = RedditAmiGoUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = br.com.mobila.RedditAmiGoUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = RedditAmiGo;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		04579D3A2640D16000E8A39F /* Build configuration list for PBXProject "RedditAmiGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04579D672640D16300E8A39F /* Debug */,
+				04579D682640D16300E8A39F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04579D692640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04579D6A2640D16300E8A39F /* Debug */,
+				04579D6B2640D16300E8A39F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04579D6C2640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04579D6D2640D16300E8A39F /* Debug */,
+				04579D6E2640D16300E8A39F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		04579D6F2640D16300E8A39F /* Build configuration list for PBXNativeTarget "RedditAmiGoUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04579D702640D16300E8A39F /* Debug */,
+				04579D712640D16300E8A39F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 04579D372640D16000E8A39F /* Project object */;
+}
