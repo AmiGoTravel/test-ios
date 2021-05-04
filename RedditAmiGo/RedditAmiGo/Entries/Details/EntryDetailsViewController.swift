@@ -7,23 +7,20 @@
 
 import UIKit
 
-class EntryDetailsViewController: UIViewController {
+class EntryDetailsViewController: UIViewController, ViewControllerProtocol {
+    private var coordinator: Coordinator?
+    private var viewModel: ViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
     }
-    
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setCoordinator(coordinator: Coordinator) {
+        self.coordinator = coordinator
     }
-    */
-
+    
+    func bindViewModel(viewModel: ViewModelProtocol) {
+        self.viewModel = viewModel
+    }
 }

@@ -8,34 +8,34 @@
 import Foundation
 
 struct EntryRequest: Codable {
-    var after: String
-    var before: String
-    var count: String
+    var after: String?
+    var before: String?
+    var count: String?
 }
 
 struct EntryResponse: Codable {
-    var kind: String
-    var data: Entry
+    var kind: String?
+    var data: EntryGroup?
+}
+
+struct EntryGroup: Codable {
+    var children: [Entry]?
+    var after: String?
+    var before: String?
 }
 
 struct Entry: Codable {
-    var children: [EntryInfo]
-    var after: String
-    var before: String
+    var kind: String?
+    var data: EntryInfo?
 }
 
 struct EntryInfo: Codable {
-    var kind: String
-    var data: EntryDetails
-}
-
-struct EntryDetails: Codable {
-    var id: String
-    var title: String
-    var author: String
-    var thumbnail: String
-    var num_comments: Int
-    var created: Double
+    var id: String?
+    var title: String?
+    var author: String?
+    var thumbnail: String?
+    var num_comments: Int?
+    var created: Double?
 }
 
 //
