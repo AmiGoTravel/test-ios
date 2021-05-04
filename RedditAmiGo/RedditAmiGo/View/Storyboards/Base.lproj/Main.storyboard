@@ -41,7 +41,7 @@
         <!--Entry Details View Controller-->
         <scene sceneID="A94-qq-G3p">
             <objects>
-                <viewController id="bnw-Ov-ezb" customClass="EntryDetailsViewController" customModule="RedditAmiGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="EntryDetailsViewController" id="bnw-Ov-ezb" customClass="EntryDetailsViewController" customModule="RedditAmiGo" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iDw-Jk-P71">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

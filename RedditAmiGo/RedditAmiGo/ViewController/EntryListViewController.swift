@@ -105,7 +105,7 @@ extension EntryListViewController: UITableViewDelegate, UITableViewDataSource {
                 cell = cellNib?.first as! EntryListTableViewCell
             }
             let item = viewModel?.getItemByIndex(index: indexPath.row)
-            cell.setData(title: item?.title, author: item?.author, thumbnail: item?.thumbnail, numComments: item?.num_comments, date: 3)
+            cell.setData(title: item?.title, author: item?.author, thumbnail: item?.thumbnail, numComments: item?.num_comments, date: item?.created)
             cell.contentView.setNeedsLayout()
             cell.contentView.layoutIfNeeded()
             return cell

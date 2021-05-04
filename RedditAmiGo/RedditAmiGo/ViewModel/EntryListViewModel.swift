@@ -38,6 +38,10 @@ class EntryListViewModel: ViewModelProtocol {
         }
     }
     
+    func setItems(entries: [Entry]) {
+        self.list = entries
+    }
+    
     func getItemByIndex(index: Int) -> EntryInfo? {
         return list[index].data
     }

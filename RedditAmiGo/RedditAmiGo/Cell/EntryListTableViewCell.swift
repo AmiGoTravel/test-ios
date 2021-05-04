@@ -23,11 +23,14 @@ class EntryListTableViewCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
     }
     
-    func setData(title: String?, author: String?, thumbnail: String?, numComments: Int?, date: Int?) {
+    func setData(title: String?, author: String?, thumbnail: String?, numComments: Int?, date: Double?) {
         lblTitle.text = title ?? ""
         lblAuthor.text = author ?? ""
         lblNumComments.text = "\(numComments ?? 0)"
-        lblDate.text = "\(date ?? 0)"
+        let now = Int(Date().timeIntervalSince1970)
+        let diff = Int(date ?? 0) - now
+        let hours = diff / 3600
+        lblDate.text = "\(hours)"
         ApiHelper.getImage(fromUrl: thumbnail ?? "") {
             [weak self]
             success, data in
@@ -38,6 +41,10 @@ class EntryListTableViewCell: UITableViewCell {
                     DispatchQueue.main.async {
                         self.imgThumb.image = image
                     }
+                }
+            } else {
+                DispatchQueue.main.async {
+                    self.imgThumb.image = #imageLiteral(resourceName: "ph")
                 }
             }
         }
