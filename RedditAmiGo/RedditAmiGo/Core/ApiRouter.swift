@@ -17,14 +17,22 @@ enum HttpRequestRouter: URLRequestConvertible {
         }
     }
     
-    var queryItems: [String: String]? {
+    var queryItems: [String: Any]? {
         switch self {
         case .listEntries(let params):
-            var items: [String: String] = [:]
-            items["after"] = params.after
-            items["before"] = params.before
-            items["count"] = params.count
-            items["limit"] = "20"
+            var items: [String: Any] = [:]
+            if params.after != nil {
+                items["after"] = params.after
+            }
+            if params.before != nil {
+                items["before"] = params.before
+            }
+            if params.count != nil {
+                items["count"] = params.count
+            }
+            if params.limit != nil {
+                items["limit"] = "20"
+            }
             
             return items
         }

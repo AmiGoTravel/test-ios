@@ -17,6 +17,14 @@ final class Coordinator {
         self.navController = navController
     }
     
+    func setTitle(_ title: String) {
+        navController.title = title
+    }
+    
+    func start() {
+        entriesList()
+    }
+    
     func entriesList() {
         let viewC = EntryListViewController.getInstance()
         let viewM = EntryListViewModel()

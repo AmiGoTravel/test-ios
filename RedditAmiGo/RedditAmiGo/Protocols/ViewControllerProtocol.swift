@@ -20,4 +20,20 @@ extension ViewControllerProtocol {
         let storyboard = UIStoryboard(name: "Main", bundle: Bundle.main)
         return storyboard.instantiateViewController(identifier: identifier) as! Self
     }
+    
+    func showErrorMessage(message: String) {
+        let alert = UIAlertController(title: "Error", message: message, preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .default, handler: nil))
+        
+        getWindow().rootViewController?.present(alert, animated: true)
+    }
+    
+    func getWindow() -> UIWindow {
+        let alertWindow = UIWindow(frame: UIScreen.main.bounds)
+        alertWindow.rootViewController = UIViewController()
+        alertWindow.windowLevel = UIWindow.Level.alert + 1
+        alertWindow.makeKeyAndVisible()
+        
+        return alertWindow
+    }
 }

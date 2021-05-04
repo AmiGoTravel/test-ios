@@ -15,7 +15,7 @@ class EntryDetailsViewModel: ViewModelProtocol {
     }
     
     func listEntries() {
-        let params = EntryRequest(after: "", before: "", count: "")
+        let params = EntryRequest(after: nil, before: nil, count: nil, limit: 20)
         ApiHelper.listEntries(params: params) {
             result in
             switch result {

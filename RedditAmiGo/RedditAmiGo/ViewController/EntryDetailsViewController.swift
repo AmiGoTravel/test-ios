@@ -8,12 +8,18 @@
 import UIKit
 
 class EntryDetailsViewController: UIViewController, ViewControllerProtocol {
+    @IBOutlet weak var lblTitle: UILabel!
+    @IBOutlet weak var lblAuthor: UILabel!
+    @IBOutlet weak var lblNumComments: UILabel!
+    @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var imgThumb: UIImageView!
+    
     private var coordinator: Coordinator?
     private var viewModel: ViewModelProtocol?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        title = "Entry details..."
     }
 
     func setCoordinator(coordinator: Coordinator) {

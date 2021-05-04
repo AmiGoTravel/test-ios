@@ -21,7 +21,7 @@ struct Constants {
     }
     
     struct HttpRequestURL {
-        static let BASE: String = "api.reddit.com/"
-        static let LIST_ENTRIES: String = "new?limit=2"
+        static let BASE: String = "https://api.reddit.com/"
+        static let LIST_ENTRIES: String = "new"
     }
 }

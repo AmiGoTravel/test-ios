@@ -24,6 +24,11 @@
 		04579DCC2640E52D00E8A39F /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DCB2640E52D00E8A39F /* ApiRouter.swift */; };
 		04579DD22640F9D700E8A39F /* ViewControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DD12640F9D700E8A39F /* ViewControllerProtocol.swift */; };
 		04579DD72640F9E500E8A39F /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DD62640F9E500E8A39F /* ViewModelProtocol.swift */; };
+		04579DE426411DF200E8A39F /* Loading.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DE326411DF200E8A39F /* Loading.swift */; };
+		04579DED26411F4800E8A39F /* EntryListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DEB26411F4800E8A39F /* EntryListTableViewCell.swift */; };
+		04579DEE26411F4800E8A39F /* EntryListTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04579DEC26411F4800E8A39F /* EntryListTableViewCell.xib */; };
+		04579DFA264122BD00E8A39F /* LoadingTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DF8264122BD00E8A39F /* LoadingTableViewCell.swift */; };
+		04579DFB264122BD00E8A39F /* LoadingTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04579DF9264122BD00E8A39F /* LoadingTableViewCell.xib */; };
 		2DE6177BBE64C65EAE6F9E6D /* Pods_RedditAmiGo_RedditAmiGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A059F21CDD71A39750BE0 /* Pods_RedditAmiGo_RedditAmiGoUITests.framework */; };
 		A3B481EF6E324D3A9B31AFB8 /* Pods_RedditAmiGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A34E83E49A01BCD40CFCDC /* Pods_RedditAmiGo.framework */; };
 		FF1F7EBF7DA490974DD33D7D /* Pods_RedditAmiGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1764A1424E3BA51AF6802F50 /* Pods_RedditAmiGoTests.framework */; };
@@ -70,6 +75,11 @@
 		04579DCB2640E52D00E8A39F /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		04579DD12640F9D700E8A39F /* ViewControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerProtocol.swift; sourceTree = "<group>"; };
 		04579DD62640F9E500E8A39F /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		04579DE326411DF200E8A39F /* Loading.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Loading.swift; sourceTree = "<group>"; };
+		04579DEB26411F4800E8A39F /* EntryListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListTableViewCell.swift; sourceTree = "<group>"; };
+		04579DEC26411F4800E8A39F /* EntryListTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EntryListTableViewCell.xib; sourceTree = "<group>"; };
+		04579DF8264122BD00E8A39F /* LoadingTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingTableViewCell.swift; sourceTree = "<group>"; };
+		04579DF9264122BD00E8A39F /* LoadingTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingTableViewCell.xib; sourceTree = "<group>"; };
 		125CE7801B1ECB70522953F7 /* Pods-RedditAmiGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditAmiGo.release.xcconfig"; path = "Target Support Files/Pods-RedditAmiGo/Pods-RedditAmiGo.release.xcconfig"; sourceTree = "<group>"; };
 		1764A1424E3BA51AF6802F50 /* Pods_RedditAmiGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditAmiGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A34E83E49A01BCD40CFCDC /* Pods_RedditAmiGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditAmiGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -134,11 +144,14 @@
 		04579D412640D16000E8A39F /* RedditAmiGo */ = {
 			isa = PBXGroup;
 			children = (
-				04579DD02640F9AB00E8A39F /* Protocols */,
 				04579DAC2640E21D00E8A39F /* Model */,
+				04579DF62641228000E8A39F /* ViewModel */,
+				04579DF52641226900E8A39F /* ViewController */,
+				04579DF72641229000E8A39F /* Cell */,
 				04579D862640D32100E8A39F /* View */,
+				04579DE226411DE300E8A39F /* Components */,
+				04579DD02640F9AB00E8A39F /* Protocols */,
 				04579D852640D30E00E8A39F /* Core */,
-				04579D822640D2D600E8A39F /* Entries */,
 				04579D422640D16000E8A39F /* AppDelegate.swift */,
 				04579D4B2640D16300E8A39F /* Assets.xcassets */,
 				04579D502640D16300E8A39F /* Info.plist */,
@@ -162,33 +175,6 @@
 				04579D662640D16300E8A39F /* Info.plist */,
 			);
 			path = RedditAmiGoUITests;
-			sourceTree = "<group>";
-		};
-		04579D822640D2D600E8A39F /* Entries */ = {
-			isa = PBXGroup;
-			children = (
-				04579D832640D2DF00E8A39F /* Listing */,
-				04579D842640D2EC00E8A39F /* Details */,
-			);
-			path = Entries;
-			sourceTree = "<group>";
-		};
-		04579D832640D2DF00E8A39F /* Listing */ = {
-			isa = PBXGroup;
-			children = (
-				04579D462640D16000E8A39F /* EntryListViewController.swift */,
-				04579D9B2640D3DB00E8A39F /* EntryListViewModel.swift */,
-			);
-			path = Listing;
-			sourceTree = "<group>";
-		};
-		04579D842640D2EC00E8A39F /* Details */ = {
-			isa = PBXGroup;
-			children = (
-				04579D962640D3D100E8A39F /* EntryDetailsViewController.swift */,
-				04579DA02640D3FD00E8A39F /* EntryDetailsViewModel.swift */,
-			);
-			path = Details;
 			sourceTree = "<group>";
 		};
 		04579D852640D30E00E8A39F /* Core */ = {
@@ -223,6 +209,8 @@
 		04579D882640D34300E8A39F /* Xibs */ = {
 			isa = PBXGroup;
 			children = (
+				04579DEC26411F4800E8A39F /* EntryListTableViewCell.xib */,
+				04579DF9264122BD00E8A39F /* LoadingTableViewCell.xib */,
 			);
 			path = Xibs;
 			sourceTree = "<group>";
@@ -242,6 +230,41 @@
 				04579DD62640F9E500E8A39F /* ViewModelProtocol.swift */,
 			);
 			path = Protocols;
+			sourceTree = "<group>";
+		};
+		04579DE226411DE300E8A39F /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				04579DE326411DF200E8A39F /* Loading.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		04579DF52641226900E8A39F /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				04579D462640D16000E8A39F /* EntryListViewController.swift */,
+				04579D962640D3D100E8A39F /* EntryDetailsViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		04579DF62641228000E8A39F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				04579D9B2640D3DB00E8A39F /* EntryListViewModel.swift */,
+				04579DA02640D3FD00E8A39F /* EntryDetailsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		04579DF72641229000E8A39F /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				04579DEB26411F4800E8A39F /* EntryListTableViewCell.swift */,
+				04579DF8264122BD00E8A39F /* LoadingTableViewCell.swift */,
+			);
+			path = Cell;
 			sourceTree = "<group>";
 		};
 		9FF8A7D7035A8AEBED9D7181 /* Frameworks */ = {
@@ -375,6 +398,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04579DEE26411F4800E8A39F /* EntryListTableViewCell.xib in Resources */,
+				04579DFB264122BD00E8A39F /* LoadingTableViewCell.xib in Resources */,
 				04579D4F2640D16300E8A39F /* LaunchScreen.storyboard in Resources */,
 				04579D4C2640D16300E8A39F /* Assets.xcassets in Resources */,
 				04579D4A2640D16000E8A39F /* Main.storyboard in Resources */,
@@ -507,9 +532,12 @@
 			files = (
 				04579DAE2640E22E00E8A39F /* Entry.swift in Sources */,
 				04579D972640D3D100E8A39F /* EntryDetailsViewController.swift in Sources */,
+				04579DE426411DF200E8A39F /* Loading.swift in Sources */,
 				04579DD22640F9D700E8A39F /* ViewControllerProtocol.swift in Sources */,
 				04579D9C2640D3DB00E8A39F /* EntryListViewModel.swift in Sources */,
+				04579DFA264122BD00E8A39F /* LoadingTableViewCell.swift in Sources */,
 				04579D922640D39300E8A39F /* ApiHelper.swift in Sources */,
+				04579DED26411F4800E8A39F /* EntryListTableViewCell.swift in Sources */,
 				04579D472640D16000E8A39F /* EntryListViewController.swift in Sources */,
 				04579D432640D16000E8A39F /* AppDelegate.swift in Sources */,
 				04579D8A2640D37000E8A39F /* Coordinator.swift in Sources */,

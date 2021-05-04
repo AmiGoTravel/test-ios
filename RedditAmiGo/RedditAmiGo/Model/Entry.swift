@@ -10,7 +10,8 @@ import Foundation
 struct EntryRequest: Codable {
     var after: String?
     var before: String?
-    var count: String?
+    var count: Int?
+    var limit: Int?
 }
 
 struct EntryResponse: Codable {
