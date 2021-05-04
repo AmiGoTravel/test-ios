@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "EntryListTableViewCell.setData(title:author:thumbnail:numComments:date:):EntryListTableViewCell.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "labelTitle">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

@@ -1,0 +1,6 @@
+framework module Pods_RedditAmiGo_RedditAmiGoUITests {
+  umbrella header "Pods-RedditAmiGo-RedditAmiGoUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
