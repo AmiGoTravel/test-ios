@@ -19,6 +19,9 @@
 		04579D972640D3D100E8A39F /* EntryDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D962640D3D100E8A39F /* EntryDetailsViewController.swift */; };
 		04579D9C2640D3DB00E8A39F /* EntryListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579D9B2640D3DB00E8A39F /* EntryListViewModel.swift */; };
 		04579DA12640D3FD00E8A39F /* EntryDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DA02640D3FD00E8A39F /* EntryDetailsViewModel.swift */; };
+		04579DAE2640E22E00E8A39F /* Entry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DAD2640E22E00E8A39F /* Entry.swift */; };
+		04579DC72640E48600E8A39F /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DC62640E48600E8A39F /* Constants.swift */; };
+		04579DCC2640E52D00E8A39F /* ApiRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04579DCB2640E52D00E8A39F /* ApiRouter.swift */; };
 		2DE6177BBE64C65EAE6F9E6D /* Pods_RedditAmiGo_RedditAmiGoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE1A059F21CDD71A39750BE0 /* Pods_RedditAmiGo_RedditAmiGoUITests.framework */; };
 		A3B481EF6E324D3A9B31AFB8 /* Pods_RedditAmiGo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36A34E83E49A01BCD40CFCDC /* Pods_RedditAmiGo.framework */; };
 		FF1F7EBF7DA490974DD33D7D /* Pods_RedditAmiGoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1764A1424E3BA51AF6802F50 /* Pods_RedditAmiGoTests.framework */; };
@@ -60,6 +63,9 @@
 		04579D962640D3D100E8A39F /* EntryDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailsViewController.swift; sourceTree = "<group>"; };
 		04579D9B2640D3DB00E8A39F /* EntryListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryListViewModel.swift; sourceTree = "<group>"; };
 		04579DA02640D3FD00E8A39F /* EntryDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryDetailsViewModel.swift; sourceTree = "<group>"; };
+		04579DAD2640E22E00E8A39F /* Entry.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Entry.swift; sourceTree = "<group>"; };
+		04579DC62640E48600E8A39F /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		04579DCB2640E52D00E8A39F /* ApiRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiRouter.swift; sourceTree = "<group>"; };
 		125CE7801B1ECB70522953F7 /* Pods-RedditAmiGo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RedditAmiGo.release.xcconfig"; path = "Target Support Files/Pods-RedditAmiGo/Pods-RedditAmiGo.release.xcconfig"; sourceTree = "<group>"; };
 		1764A1424E3BA51AF6802F50 /* Pods_RedditAmiGoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditAmiGoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		36A34E83E49A01BCD40CFCDC /* Pods_RedditAmiGo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RedditAmiGo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,6 +130,7 @@
 		04579D412640D16000E8A39F /* RedditAmiGo */ = {
 			isa = PBXGroup;
 			children = (
+				04579DAC2640E21D00E8A39F /* Model */,
 				04579D862640D32100E8A39F /* View */,
 				04579D852640D30E00E8A39F /* Core */,
 				04579D822640D2D600E8A39F /* Entries */,
@@ -184,6 +191,8 @@
 			children = (
 				04579D892640D37000E8A39F /* Coordinator.swift */,
 				04579D912640D39300E8A39F /* ApiHelper.swift */,
+				04579DCB2640E52D00E8A39F /* ApiRouter.swift */,
+				04579DC62640E48600E8A39F /* Constants.swift */,
 			);
 			path = Core;
 			sourceTree = "<group>";
@@ -211,6 +220,14 @@
 			children = (
 			);
 			path = Xibs;
+			sourceTree = "<group>";
+		};
+		04579DAC2640E21D00E8A39F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				04579DAD2640E22E00E8A39F /* Entry.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		9FF8A7D7035A8AEBED9D7181 /* Frameworks */ = {
@@ -474,13 +491,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04579DAE2640E22E00E8A39F /* Entry.swift in Sources */,
 				04579D972640D3D100E8A39F /* EntryDetailsViewController.swift in Sources */,
 				04579D9C2640D3DB00E8A39F /* EntryListViewModel.swift in Sources */,
 				04579D922640D39300E8A39F /* ApiHelper.swift in Sources */,
 				04579D472640D16000E8A39F /* EntryListViewController.swift in Sources */,
 				04579D432640D16000E8A39F /* AppDelegate.swift in Sources */,
 				04579D8A2640D37000E8A39F /* Coordinator.swift in Sources */,
+				04579DCC2640E52D00E8A39F /* ApiRouter.swift in Sources */,
 				04579DA12640D3FD00E8A39F /* EntryDetailsViewModel.swift in Sources */,
+				04579DC72640E48600E8A39F /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
