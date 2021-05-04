@@ -2,12 +2,12 @@
 //  ViewController.swift
 //  RedditAmiGo
 //
-//  Created by Mac on 3/5/21.
+//  Created by Leonardo Saganski on 3/5/21.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class EntryListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

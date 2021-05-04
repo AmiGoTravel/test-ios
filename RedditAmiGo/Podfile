@@ -1,0 +1,17 @@
+platform :ios, '12.0'
+
+target 'RedditAmiGo' do
+  use_frameworks!
+
+  pod 'Alamofire', '~> 5.0.0-rc.3'
+
+  target 'RedditAmiGoTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+  target 'RedditAmiGoUITests' do
+    # Pods for testing
+  end
+
+end
