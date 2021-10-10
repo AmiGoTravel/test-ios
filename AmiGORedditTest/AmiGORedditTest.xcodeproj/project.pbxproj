@@ -79,13 +79,9 @@
 		B1435C1A2712732A0011ADFC /* AmiGORedditTest */ = {
 			isa = PBXGroup;
 			children = (
-				B1435C1B2712732A0011ADFC /* AppDelegate.swift */,
-				B1435C1D2712732A0011ADFC /* SceneDelegate.swift */,
-				B1435C1F2712732A0011ADFC /* ViewController.swift */,
-				B1435C212712732A0011ADFC /* Main.storyboard */,
-				B1435C242712732C0011ADFC /* Assets.xcassets */,
-				B1435C262712732C0011ADFC /* LaunchScreen.storyboard */,
-				B1435C292712732C0011ADFC /* Info.plist */,
+				B1435C52271276D90011ADFC /* Configuration */,
+				B1435C53271276FD0011ADFC /* Network */,
+				B1435C54271277840011ADFC /* Scenes */,
 			);
 			path = AmiGORedditTest;
 			sourceTree = "<group>";
@@ -97,6 +93,42 @@
 				B1435C342712732D0011ADFC /* Info.plist */,
 			);
 			path = AmiGORedditTestTests;
+			sourceTree = "<group>";
+		};
+		B1435C52271276D90011ADFC /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				B1435C262712732C0011ADFC /* LaunchScreen.storyboard */,
+				B1435C292712732C0011ADFC /* Info.plist */,
+				B1435C1B2712732A0011ADFC /* AppDelegate.swift */,
+				B1435C1D2712732A0011ADFC /* SceneDelegate.swift */,
+				B1435C242712732C0011ADFC /* Assets.xcassets */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		B1435C53271276FD0011ADFC /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		B1435C54271277840011ADFC /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+				B1435C55271278D60011ADFC /* RedditTopEntries */,
+			);
+			path = Scenes;
+			sourceTree = "<group>";
+		};
+		B1435C55271278D60011ADFC /* RedditTopEntries */ = {
+			isa = PBXGroup;
+			children = (
+				B1435C1F2712732A0011ADFC /* ViewController.swift */,
+				B1435C212712732A0011ADFC /* Main.storyboard */,
+			);
+			path = RedditTopEntries;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
