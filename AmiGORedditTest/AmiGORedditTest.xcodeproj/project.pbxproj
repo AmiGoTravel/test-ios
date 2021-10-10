@@ -14,18 +14,10 @@
 		B1435C252712732C0011ADFC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B1435C242712732C0011ADFC /* Assets.xcassets */; };
 		B1435C282712732C0011ADFC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B1435C262712732C0011ADFC /* LaunchScreen.storyboard */; };
 		B1435C332712732D0011ADFC /* AmiGORedditTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1435C322712732D0011ADFC /* AmiGORedditTestTests.swift */; };
-		B1435C3E2712732D0011ADFC /* AmiGORedditTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B1435C3D2712732D0011ADFC /* AmiGORedditTestUITests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		B1435C2F2712732C0011ADFC /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = B1435C102712732A0011ADFC /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = B1435C172712732A0011ADFC;
-			remoteInfo = AmiGORedditTest;
-		};
-		B1435C3A2712732D0011ADFC /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = B1435C102712732A0011ADFC /* Project object */;
 			proxyType = 1;
@@ -46,9 +38,6 @@
 		B1435C2E2712732C0011ADFC /* AmiGORedditTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiGORedditTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B1435C322712732D0011ADFC /* AmiGORedditTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiGORedditTestTests.swift; sourceTree = "<group>"; };
 		B1435C342712732D0011ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B1435C392712732D0011ADFC /* AmiGORedditTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AmiGORedditTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		B1435C3D2712732D0011ADFC /* AmiGORedditTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmiGORedditTestUITests.swift; sourceTree = "<group>"; };
-		B1435C3F2712732D0011ADFC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,13 +55,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1435C362712732D0011ADFC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -81,7 +63,6 @@
 			children = (
 				B1435C1A2712732A0011ADFC /* AmiGORedditTest */,
 				B1435C312712732D0011ADFC /* AmiGORedditTestTests */,
-				B1435C3C2712732D0011ADFC /* AmiGORedditTestUITests */,
 				B1435C192712732A0011ADFC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -91,7 +72,6 @@
 			children = (
 				B1435C182712732A0011ADFC /* AmiGORedditTest.app */,
 				B1435C2E2712732C0011ADFC /* AmiGORedditTestTests.xctest */,
-				B1435C392712732D0011ADFC /* AmiGORedditTestUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,15 +97,6 @@
 				B1435C342712732D0011ADFC /* Info.plist */,
 			);
 			path = AmiGORedditTestTests;
-			sourceTree = "<group>";
-		};
-		B1435C3C2712732D0011ADFC /* AmiGORedditTestUITests */ = {
-			isa = PBXGroup;
-			children = (
-				B1435C3D2712732D0011ADFC /* AmiGORedditTestUITests.swift */,
-				B1435C3F2712732D0011ADFC /* Info.plist */,
-			);
-			path = AmiGORedditTestUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -166,24 +137,6 @@
 			productReference = B1435C2E2712732C0011ADFC /* AmiGORedditTestTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		B1435C382712732D0011ADFC /* AmiGORedditTestUITests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = B1435C482712732D0011ADFC /* Build configuration list for PBXNativeTarget "AmiGORedditTestUITests" */;
-			buildPhases = (
-				B1435C352712732D0011ADFC /* Sources */,
-				B1435C362712732D0011ADFC /* Frameworks */,
-				B1435C372712732D0011ADFC /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				B1435C3B2712732D0011ADFC /* PBXTargetDependency */,
-			);
-			name = AmiGORedditTestUITests;
-			productName = AmiGORedditTestUITests;
-			productReference = B1435C392712732D0011ADFC /* AmiGORedditTestUITests.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -197,10 +150,6 @@
 						CreatedOnToolsVersion = 12.4;
 					};
 					B1435C2D2712732C0011ADFC = {
-						CreatedOnToolsVersion = 12.4;
-						TestTargetID = B1435C172712732A0011ADFC;
-					};
-					B1435C382712732D0011ADFC = {
 						CreatedOnToolsVersion = 12.4;
 						TestTargetID = B1435C172712732A0011ADFC;
 					};
@@ -221,7 +170,6 @@
 			targets = (
 				B1435C172712732A0011ADFC /* AmiGORedditTest */,
 				B1435C2D2712732C0011ADFC /* AmiGORedditTestTests */,
-				B1435C382712732D0011ADFC /* AmiGORedditTestUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -238,13 +186,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		B1435C2C2712732C0011ADFC /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B1435C372712732D0011ADFC /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -272,14 +213,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		B1435C352712732D0011ADFC /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				B1435C3E2712732D0011ADFC /* AmiGORedditTestUITests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -287,11 +220,6 @@
 			isa = PBXTargetDependency;
 			target = B1435C172712732A0011ADFC /* AmiGORedditTest */;
 			targetProxy = B1435C2F2712732C0011ADFC /* PBXContainerItemProxy */;
-		};
-		B1435C3B2712732D0011ADFC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = B1435C172712732A0011ADFC /* AmiGORedditTest */;
-			targetProxy = B1435C3A2712732D0011ADFC /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -509,44 +437,6 @@
 			};
 			name = Release;
 		};
-		B1435C492712732D0011ADFC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AmiGORedditTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = boninirafael.AmiGO.AmiGORedditTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AmiGORedditTest;
-			};
-			name = Debug;
-		};
-		B1435C4A2712732D0011ADFC /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = AmiGORedditTestUITests/Info.plist;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = boninirafael.AmiGO.AmiGORedditTestUITests;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = AmiGORedditTest;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -573,15 +463,6 @@
 			buildConfigurations = (
 				B1435C462712732D0011ADFC /* Debug */,
 				B1435C472712732D0011ADFC /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		B1435C482712732D0011ADFC /* Build configuration list for PBXNativeTarget "AmiGORedditTestUITests" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B1435C492712732D0011ADFC /* Debug */,
-				B1435C4A2712732D0011ADFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
