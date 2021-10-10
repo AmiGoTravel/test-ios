@@ -1,7 +1,7 @@
 import XCTest
 @testable import AmiGORedditTest
 
-class URLSessionHTTPClientTests: XCTestCase {
+final class URLSessionHTTPClientTests: XCTestCase {
     override func tearDown() {
         super.tearDown()
         
