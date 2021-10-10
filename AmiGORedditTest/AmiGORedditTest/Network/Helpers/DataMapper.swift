@@ -12,10 +12,10 @@ final class DataMapper {
     
     private static func map<T: Decodable>(_ data: Data, from response: HTTPURLResponse) throws -> T {
         guard response.isOK,
-              let root = try? JSONDecoder().decode(T.self, from: data) else {
+              let decodedObject = try? JSONDecoder().decode(T.self, from: data) else {
             throw ServiceError.invalidData
         }
         
-        return root
+        return decodedObject
     }
 }
