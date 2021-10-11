@@ -21,8 +21,18 @@ final class RedditTopEntriesPaginationHandler {
     }
     
     func updatePagination(with rootModel: RedditAPIRootModel) {
+        if shouldResetPagination {
+            resetPagination()
+        }
         let newEntries = rootModel.data.children.compactMap { $0.data }
         self.entriesList.append(contentsOf: newEntries)
         self.after = rootModel.data.after
+    }
+    
+    func resetPagination() {
+        cellControllers = []
+        entriesList = []
+        after = ""
+        shouldResetPagination = false
     }
 }
