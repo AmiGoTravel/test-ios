@@ -6,4 +6,5 @@ final class RedditTopEntryCell: UITableViewCell {
     @IBOutlet weak var numOfCommentsLabel: UILabel!
     @IBOutlet weak var entryDateLabel: UILabel!
     @IBOutlet weak var thumbnailImageView: UIImageView!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
 }
