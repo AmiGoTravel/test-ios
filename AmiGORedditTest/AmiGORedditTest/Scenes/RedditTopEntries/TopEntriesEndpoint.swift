@@ -12,13 +12,15 @@ enum TopEntriesEndPoint: ApiEndpoint {
     var queryItems: [URLQueryItem]  {
         guard case let .topEntries(after, count) = self else { return [] }
         
+        let entriesLimit = "50"
+        
         guard !after.isEmpty,
               count != 0 else {
-            return [URLQueryItem(name: "limit", value: "50")]
+            return [URLQueryItem(name: "limit", value: entriesLimit)]
         }
         
         return [
-            URLQueryItem(name: "limit", value: "50"),
+            URLQueryItem(name: "limit", value: entriesLimit),
             URLQueryItem(name: "count", value: String(count)),
             URLQueryItem(name: "after", value: after)
         ]
