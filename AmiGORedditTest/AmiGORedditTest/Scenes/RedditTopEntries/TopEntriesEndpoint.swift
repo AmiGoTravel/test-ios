@@ -4,6 +4,6 @@ enum TopEntriesEndPoint: ApiEndpoint {
     case topEntries
     
     var path: String {
-        return "/path"
+        return "/top?limit=50"
     }
 }

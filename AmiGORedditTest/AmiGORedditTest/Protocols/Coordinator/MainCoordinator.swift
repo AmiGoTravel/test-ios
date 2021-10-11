@@ -9,8 +9,7 @@ final class MainCoordinator: Coordinator {
     }
 
     func start() {
-        let vc = RedditTopEntriesListViewController.instantiate()
-        vc.coordinator = self
-        navigationController.pushViewController(vc, animated: false)
+        let topEntriesController = RedditTopEntriesListFactory.make(coordinatorDelegate: self)
+        navigationController.pushViewController(topEntriesController, animated: false)
     }
 }
