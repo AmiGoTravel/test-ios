@@ -1,6 +1,7 @@
 import Foundation
 
 protocol RedditTopEntriesListViewModelProtocol {
+    var numberOfEntries: Int { get }
     func fetchEntries()
 }
 
@@ -8,6 +9,8 @@ final class RedditTopEntriesListViewModel {
     weak var controllerDelegate: RedditTopEntriesListViewControllerProtocol?
     private let service: RedditTopEntriesListServiceProtocol
     private let paginationHandler = RedditTopEntriesPaginationHandler()
+    
+    var numberOfEntries: Int { paginationHandler.entriesCount }
     
     init(controllerDelegate: RedditTopEntriesListViewControllerProtocol,
          service: RedditTopEntriesListServiceProtocol = RedditTopEntriesListService()) {

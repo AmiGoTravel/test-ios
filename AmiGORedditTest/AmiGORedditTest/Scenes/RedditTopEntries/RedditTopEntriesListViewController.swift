@@ -5,6 +5,8 @@ protocol RedditTopEntriesListViewControllerProtocol: AnyObject {
 }
 
 final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
+    @IBOutlet weak var entriesTableView: UITableView!
+    
     weak var coordinator: MainCoordinator?
     var viewModel: RedditTopEntriesListViewModelProtocol?
     
@@ -17,5 +19,15 @@ final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
 extension RedditTopEntriesListViewController: RedditTopEntriesListViewControllerProtocol {
     func displayEntries(from model: [RedditChildrenData]) {
         
+    }
+}
+
+extension RedditTopEntriesListViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        viewModel?.numberOfEntries ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        return UITableViewCell()
     }
 }

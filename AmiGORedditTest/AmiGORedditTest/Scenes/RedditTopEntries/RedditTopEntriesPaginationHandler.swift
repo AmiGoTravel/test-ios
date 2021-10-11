@@ -11,6 +11,5 @@ final class RedditTopEntriesPaginationHandler {
         let newEntries = rootModel.data.children.compactMap { $0.data }
         self.entriesList.append(contentsOf: newEntries)
         self.after = rootModel.data.after
-        print(entriesList)
     }
 }
