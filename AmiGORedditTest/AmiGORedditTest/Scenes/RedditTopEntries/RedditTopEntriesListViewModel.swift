@@ -5,10 +5,12 @@ protocol RedditTopEntriesListViewModelProtocol {
     func fetchEntries()
     func cellController(forRowAt indexPath: IndexPath) -> RedditTopEntryCellController
     func refreshData()
+    func navigateToDetailScene(indexpath: IndexPath)
 }
 
 final class RedditTopEntriesListViewModel {
     weak var controllerDelegate: RedditTopEntriesListViewControllerProtocol?
+    weak var coordinator: MainCoordinator?
     private let service: RedditTopEntriesListServiceProtocol
     private let paginationHandler = RedditTopEntriesPaginationHandler()
     
@@ -42,5 +44,10 @@ extension RedditTopEntriesListViewModel: RedditTopEntriesListViewModelProtocol {
     func refreshData() {
         paginationHandler.shouldResetPagination = true
         fetchEntries()
+    }
+    
+    func navigateToDetailScene(indexpath: IndexPath) {
+        let selectedEntry = paginationHandler.entriesList[indexpath.row]
+        coordinator?.showEntryDetails(with: selectedEntry)
     }
 }

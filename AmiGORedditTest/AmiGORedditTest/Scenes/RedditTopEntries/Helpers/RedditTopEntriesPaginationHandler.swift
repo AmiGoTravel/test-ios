@@ -4,7 +4,7 @@ final class RedditTopEntriesPaginationHandler {
     private(set) var cellControllers = [RedditTopEntryCellController]()
     private(set) var after = ""
     var shouldResetPagination = false
-    private var entriesList = [RedditChildrenData]() {
+    private(set) var entriesList = [RedditChildrenData]() {
         didSet {
             cellControllers.append(contentsOf: entriesList.map { mapToController($0) })
         }

@@ -5,7 +5,7 @@ enum RedditTopEntriesListFactory {
         let viewController = RedditTopEntriesListViewController.instantiate()
         let viewModel = RedditTopEntriesListViewModel(controllerDelegate: viewController)
         viewController.viewModel = viewModel
-        viewController.coordinator = coordinatorDelegate
+        viewModel.coordinator = coordinatorDelegate
         return viewController
     }
 }

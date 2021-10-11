@@ -7,9 +7,8 @@ protocol RedditTopEntriesListViewControllerProtocol: AnyObject {
 
 final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
     @IBOutlet weak var entriesTableView: UITableView!
-    let refreshControl = UIRefreshControl()
     
-    weak var coordinator: MainCoordinator?
+    let refreshControl = UIRefreshControl()
     var viewModel: RedditTopEntriesListViewModelProtocol?
     
     override func viewDidLoad() {
@@ -57,6 +56,7 @@ extension RedditTopEntriesListViewController: UITableViewDelegate, UITableViewDa
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
+        viewModel?.navigateToDetailScene(indexpath: indexPath)
     }
     
     func tableView(_ tableView: UITableView, didEndDisplaying cell: UITableViewCell, forRowAt indexPath: IndexPath) {
