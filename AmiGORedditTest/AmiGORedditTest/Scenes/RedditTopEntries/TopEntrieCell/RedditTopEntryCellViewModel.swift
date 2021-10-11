@@ -12,7 +12,6 @@ final class RedditTopEntryCellViewModel {
         self.imageLoader = imageLoader
     }
     
-    
     func requestImage() {
         guard let url = URL(string: self.model.thumbnail) else { return }
        
