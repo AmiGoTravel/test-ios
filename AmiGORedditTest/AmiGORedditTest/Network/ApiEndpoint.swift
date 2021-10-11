@@ -6,7 +6,7 @@ protocol ApiEndpoint {
 }
 
 extension ApiEndpoint {
-    var baseURL: URL { URL(string: "https://redditUrl.com")! }
+    var baseURL: URL { URL(string: "https://api.reddit.com")! }
     
     var absoluteStringUrl: String {
         let basePathString = baseURL.absoluteString

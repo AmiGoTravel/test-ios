@@ -3,9 +3,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
     var coordinator: MainCoordinator?
-    lazy var window: UIWindow? = {
-        return UIWindow()
-    }()
+    lazy var window: UIWindow? = UIWindow()
     
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         let navController = UINavigationController()

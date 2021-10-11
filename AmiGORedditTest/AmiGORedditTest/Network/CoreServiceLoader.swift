@@ -5,7 +5,7 @@ final class CoreServiceLoader {
     private let apiEndpoint: ApiEndpoint
     
     init(apiEndpoint: ApiEndpoint,
-         client: HTTPClient = URLSessionHTTPClient(session: URLSession.shared)) {
+         client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
         self.apiEndpoint = apiEndpoint
         self.client = client
     }
