@@ -33,7 +33,7 @@ final class CoreServiceLoaderTests: XCTestCase {
         sut.load(apiEndpoint: endpoint, completion: completion)
         sut.load(apiEndpoint: endpoint, completion: completion)
         
-        XCTAssertEqual(client.requestedURLs, [stringUrl, stringUrl`])
+        XCTAssertEqual(client.requestedURLs, [stringUrl, stringUrl])
     }
     
     func test_load_deliversErrorOnClientError() {
