@@ -4,6 +4,7 @@ protocol RedditTopEntriesListViewModelProtocol {
     var numberOfEntries: Int { get }
     func fetchEntries()
     func cellController(forRowAt indexPath: IndexPath) -> RedditTopEntryCellController
+    func refreshData()
 }
 
 final class RedditTopEntriesListViewModel {
@@ -36,5 +37,10 @@ extension RedditTopEntriesListViewModel: RedditTopEntriesListViewModelProtocol {
                 break
             }
         }
+    }
+    
+    func refreshData() {
+        paginationHandler.shouldResetPagination = true
+        fetchEntries()
     }
 }
