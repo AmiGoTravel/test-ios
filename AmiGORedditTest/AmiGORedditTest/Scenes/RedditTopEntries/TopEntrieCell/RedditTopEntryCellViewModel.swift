@@ -21,7 +21,7 @@ final class RedditTopEntryCellViewModel {
         task = imageLoader.loadImageData(from: url) { [weak self] result in
             switch result {
             case let .success(data):
-                self?.controllerDelegate?.presentImageDate(with: data, for: model)
+                self?.controllerDelegate?.presentImageData(with: data, for: model)
             case .failure:
                 self?.controllerDelegate?.presentWithDefaultImage(for: model)
             }

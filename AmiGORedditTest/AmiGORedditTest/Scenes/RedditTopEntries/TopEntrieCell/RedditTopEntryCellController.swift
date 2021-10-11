@@ -2,7 +2,7 @@ import UIKit
 
 protocol RedditTopEntryCellControllerDelegate: AnyObject {
     func didStartLoadingImage(for model: RedditChildrenData)
-    func presentImageDate(with data: Data, for model: RedditChildrenData)
+    func presentImageData(with data: Data, for model: RedditChildrenData)
     func presentWithDefaultImage(for model: RedditChildrenData)
     func presentError()
 }
@@ -40,17 +40,20 @@ final class RedditTopEntryCellController {
         cell?.authorLabel.text = model?.author
         cell?.titleLabel.text = model?.title
         cell?.numOfCommentsLabel.text = "Comments: \(model?.numComments ?? 0)"
-        cell?.entryDateLabel.text = "\(model?.created ?? 0)"
+        cell?.entryDateLabel.text = "\(model?.hoursDiff() ?? 0) hours ago"
         cell?.thumbnailImageView.image = image
     }
 }
 
 extension RedditTopEntryCellController: RedditTopEntryCellControllerDelegate {
     func didStartLoadingImage(for model: RedditChildrenData) {
+        cell?.loadingIndicator.startAnimating()
+        cell?.loadingIndicator.isHidden = false
         display(model)
     }
     
-    func presentImageDate(with data: Data, for model: RedditChildrenData) {
+    func presentImageData(with data: Data, for model: RedditChildrenData) {
+        cell?.loadingIndicator.isHidden = true
         let thumbImage = UIImage(data: data)
         display(model, image: thumbImage)
     }
@@ -61,5 +64,14 @@ extension RedditTopEntryCellController: RedditTopEntryCellControllerDelegate {
     
     func presentError() {
         print("presentError")
+    }
+}
+
+private extension RedditChildrenData {
+    func hoursDiff() -> Int {
+        let entryDate = Date(timeIntervalSince1970: created)
+        let diffComponents = Calendar.current.dateComponents([.hour], from: entryDate, to: Date())
+        let hours = diffComponents.hour
+        return hours ?? 0
     }
 }
