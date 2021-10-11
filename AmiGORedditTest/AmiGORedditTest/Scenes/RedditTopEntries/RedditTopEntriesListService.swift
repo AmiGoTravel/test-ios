@@ -1,6 +1,6 @@
 import Foundation
 
-typealias CardHomeTransactionsServiceCompletion = (Result<RedditAPIRootModel, Error>) -> Void
+typealias CardHomeTransactionsServiceCompletion = (Result<RedditAPIRootModel, ServiceError>) -> Void
 
 protocol RedditTopEntriesListServiceProtocol {
     func fetchTopEntries(completion: @escaping CardHomeTransactionsServiceCompletion)
@@ -16,6 +16,8 @@ final class RedditTopEntriesListService {
 
 extension RedditTopEntriesListService: RedditTopEntriesListServiceProtocol {
     func fetchTopEntries(completion: @escaping CardHomeTransactionsServiceCompletion) {
-        
+        DispatchQueue.main.async {
+            self.serviceLoader.load(completion: completion)
+        }
     }
 }
