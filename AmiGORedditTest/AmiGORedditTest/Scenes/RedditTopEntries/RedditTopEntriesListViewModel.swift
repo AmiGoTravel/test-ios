@@ -7,8 +7,7 @@ protocol RedditTopEntriesListViewModelProtocol {
 final class RedditTopEntriesListViewModel {
     weak var controllerDelegate: RedditTopEntriesListViewControllerProtocol?
     private let service: RedditTopEntriesListServiceProtocol
-    private var entriesList = [RedditChildrenData]()
-    private var after = ""
+    private let paginationHandler = RedditTopEntriesPaginationHandler()
     
     init(controllerDelegate: RedditTopEntriesListViewControllerProtocol,
          service: RedditTopEntriesListServiceProtocol = RedditTopEntriesListService()) {
@@ -18,15 +17,29 @@ final class RedditTopEntriesListViewModel {
 
 extension RedditTopEntriesListViewModel: RedditTopEntriesListViewModelProtocol {
     func fetchEntries() {
-        service.fetchTopEntries { result in
+        service.fetchTopEntries(paginationHandler) { [weak self] result in
+            guard let self = self else { return }
             switch result {
             case let .success(redditModel):
-                self.after = redditModel.data.after
-                let newEntries = redditModel.data.children.compactMap { $0.data }
-                self.entriesList.append(contentsOf: newEntries)
+                self.paginationHandler.updatePagination(with: redditModel)
+                self.controllerDelegate?.displayEntries(from: self.paginationHandler.entriesList)
             case .failure:
                 break
             }
         }
+    }
+}
+
+final class RedditTopEntriesPaginationHandler {
+    private(set) var entriesList = [RedditChildrenData]()
+    private(set) var after = ""
+    var entriesCount: Int {
+        entriesList.count
+    }
+    
+    func updatePagination(with rootModel: RedditAPIRootModel) {
+        let newEntries = rootModel.data.children.compactMap { $0.data }
+        self.entriesList.append(contentsOf: newEntries)
+        self.after = rootModel.data.after
     }
 }
