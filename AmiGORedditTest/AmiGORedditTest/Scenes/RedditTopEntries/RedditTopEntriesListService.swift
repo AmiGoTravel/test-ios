@@ -18,12 +18,10 @@ final class RedditTopEntriesListService {
 extension RedditTopEntriesListService: RedditTopEntriesListServiceProtocol {
     func fetchTopEntries(_ paginationHandler: RedditTopEntriesPaginationHandler,
                          completion: @escaping CardHomeTransactionsServiceCompletion) {
-        DispatchQueue.main.async {
             self.serviceLoader.load(
                 apiEndpoint: TopEntriesEndPoint.topEntries(after: paginationHandler.after,
                                                            count: paginationHandler.entriesCount),
                 completion: completion
             )
-        }
     }
 }

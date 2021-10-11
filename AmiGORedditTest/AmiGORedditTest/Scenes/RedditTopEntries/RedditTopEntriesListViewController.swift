@@ -36,11 +36,13 @@ final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
 extension RedditTopEntriesListViewController: RedditTopEntriesListViewControllerProtocol {
     func displayEntries() {
         entriesTableView.reloadData()
+        refreshControl.endRefreshing()
         entriesTableView.tableFooterView?.isHidden = true
     }
     
     func displayError() {
         entriesTableView.tableFooterView?.isHidden = true
+        refreshControl.endRefreshing()
     }
 }
 
