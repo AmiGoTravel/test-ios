@@ -2,17 +2,14 @@ import Foundation
 
 final class CoreServiceLoader {
     private let client: HTTPClient
-    private let apiEndpoint: ApiEndpoint
     
-    init(apiEndpoint: ApiEndpoint,
-         client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
-        self.apiEndpoint = apiEndpoint
+    init(client: HTTPClient = URLSessionHTTPClient(session: URLSession(configuration: .ephemeral))) {
         self.client = client
     }
 }
 
 extension CoreServiceLoader: ServiceLoader {
-    func load<T>(completion: @escaping (Result<T, ServiceError>) -> Void) where T : Decodable {
+    func load<T>(apiEndpoint: ApiEndpoint, completion: @escaping (Result<T, ServiceError>) -> Void) where T : Decodable {
         guard let url = URL(string: apiEndpoint.absoluteStringUrl) else {
             return completion(.failure(ServiceError.malformedURL))
         }

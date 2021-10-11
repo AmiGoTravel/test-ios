@@ -17,7 +17,7 @@ final class CoreServiceLoaderTests: XCTestCase {
         let (sut, client) = makeSUT(endpoint: endpoint)
         
         let completion: ((Result<String, ServiceError>) -> Void) = { _ in }
-        sut.load(completion: completion)
+        sut.load(apiEndpoint: endpoint, completion: completion)
         
         XCTAssertEqual(client.requestedURLs, [url])
     }
@@ -28,8 +28,8 @@ final class CoreServiceLoaderTests: XCTestCase {
         let (sut, client) = makeSUT(endpoint: endpoint)
         
         let completion: ((Result<String, ServiceError>) -> Void) = { _ in }
-        sut.load(completion: completion)
-        sut.load(completion: completion)
+        sut.load(apiEndpoint: endpoint, completion: completion)
+        sut.load(apiEndpoint: endpoint, completion: completion)
         
         XCTAssertEqual(client.requestedURLs, [url, url])
     }
@@ -77,10 +77,10 @@ final class CoreServiceLoaderTests: XCTestCase {
     func test_load_doesNotDeliverResultAfterSUTInstanceHasBeenDeallocated() {
         let endpoint = ApiEndpointFake.fake
         let client = HTTPClientSpy()
-        var sut: CoreServiceLoader? = CoreServiceLoader(apiEndpoint: endpoint, client: client)
+        var sut: CoreServiceLoader? = CoreServiceLoader(client: client)
         
         var capturedResults = [RedditApiResult]()
-        sut?.load { capturedResults.append($0) }
+        sut?.load(apiEndpoint: endpoint) { capturedResults.append($0) }
         
         sut = nil
         client.complete(withStatusCode: 200, data: makeItemsJSON([]))
@@ -92,7 +92,7 @@ final class CoreServiceLoaderTests: XCTestCase {
     
     private func makeSUT(endpoint: ApiEndpointFake = .fake, file: StaticString = #file, line: UInt = #line) -> (sut: CoreServiceLoader, client: HTTPClientSpy) {
         let client = HTTPClientSpy()
-        let sut = CoreServiceLoader(apiEndpoint: endpoint, client: client)
+        let sut = CoreServiceLoader(client: client)
         trackForMemoryLeaks(sut, file: file, line: line)
         trackForMemoryLeaks(client, file: file, line: line)
         return (sut, client)
@@ -120,7 +120,7 @@ final class CoreServiceLoaderTests: XCTestCase {
             exp.fulfill()
         }
         
-        sut.load(completion: completion)
+        sut.load(apiEndpoint: ApiEndpointFake.fake, completion: completion)
         
         action()
         

@@ -1,5 +1,5 @@
 import Foundation
 
 protocol ServiceLoader {
-    func load<T: Decodable>(completion: @escaping (Result<T, ServiceError>) -> Void)
+    func load<T: Decodable>(apiEndpoint: ApiEndpoint, completion: @escaping (Result<T, ServiceError>) -> Void)
 }
