@@ -10,7 +10,7 @@ final class CoreServiceLoader {
 
 extension CoreServiceLoader: ServiceLoader {
     func load<T>(apiEndpoint: ApiEndpoint, completion: @escaping (Result<T, ServiceError>) -> Void) where T : Decodable {
-        guard let url = URL(string: apiEndpoint.absoluteStringUrl) else {
+        guard let url = apiEndpoint.urlComponents.url else {
             return completion(.failure(ServiceError.malformedURL))
         }
         
