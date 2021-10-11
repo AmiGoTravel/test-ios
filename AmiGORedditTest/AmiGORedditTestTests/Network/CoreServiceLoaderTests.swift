@@ -13,25 +13,27 @@ final class CoreServiceLoaderTests: XCTestCase {
     
     func test_load_requestsDataFromURL() throws {
         let endpoint = ApiEndpointFake.fake
-        let url = try XCTUnwrap(URL(string: endpoint.absoluteStringUrl))
+        let url = endpoint.urlComponents.url?.absoluteString ?? ""
+        let stringUrl = try XCTUnwrap(URL(string: url))
         let (sut, client) = makeSUT(endpoint: endpoint)
         
         let completion: ((Result<String, ServiceError>) -> Void) = { _ in }
         sut.load(apiEndpoint: endpoint, completion: completion)
         
-        XCTAssertEqual(client.requestedURLs, [url])
+        XCTAssertEqual(client.requestedURLs, [stringUrl])
     }
     
     func test_loadTwice_requestsDataFromURLTwice() throws {
         let endpoint = ApiEndpointFake.fake
-        let url = try XCTUnwrap(URL(string: endpoint.absoluteStringUrl))
+        let url = endpoint.urlComponents.url?.absoluteString ?? ""
+        let stringUrl = try XCTUnwrap(URL(string: url))
         let (sut, client) = makeSUT(endpoint: endpoint)
         
         let completion: ((Result<String, ServiceError>) -> Void) = { _ in }
         sut.load(apiEndpoint: endpoint, completion: completion)
         sut.load(apiEndpoint: endpoint, completion: completion)
         
-        XCTAssertEqual(client.requestedURLs, [url, url])
+        XCTAssertEqual(client.requestedURLs, [stringUrl, stringUrl`])
     }
     
     func test_load_deliversErrorOnClientError() {
