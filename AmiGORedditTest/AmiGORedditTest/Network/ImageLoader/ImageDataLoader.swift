@@ -1,10 +1,10 @@
 import Foundation
 
-public protocol ImageDataLoaderTask {
+protocol ImageDataLoaderTask {
     func cancel()
 }
 
-public protocol ImageDataLoader {
+protocol ImageDataLoader {
     typealias Result = Swift.Result<Data, Error>
     
     @discardableResult

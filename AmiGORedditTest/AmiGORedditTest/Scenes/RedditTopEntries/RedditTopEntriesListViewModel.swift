@@ -10,9 +10,9 @@ protocol RedditTopEntriesListViewModelProtocol {
 
 final class RedditTopEntriesListViewModel {
     weak var controllerDelegate: RedditTopEntriesListViewControllerProtocol?
-    weak var coordinator: MainCoordinator?
+    weak var coordinator: RedditTopEntriesCoordinatorDelegate?
     private let service: RedditTopEntriesListServiceProtocol
-    private let paginationHandler = RedditTopEntriesPaginationHandler()
+    let paginationHandler = RedditTopEntriesPaginationHandler()
     
     init(controllerDelegate: RedditTopEntriesListViewControllerProtocol,
          service: RedditTopEntriesListServiceProtocol = MainThreadDispatchDecorator(RedditTopEntriesListService())) {
@@ -36,7 +36,7 @@ extension RedditTopEntriesListViewModel: RedditTopEntriesListViewModelProtocol {
                 self.paginationHandler.updatePagination(with: redditModel)
                 self.controllerDelegate?.displayEntries()
             case .failure:
-                break
+                self.controllerDelegate?.displayError()
             }
         }
     }

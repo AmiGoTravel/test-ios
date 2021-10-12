@@ -15,8 +15,11 @@ final class MainCoordinator: Coordinator {
     }
 }
 
+protocol RedditTopEntriesCoordinatorDelegate: AnyObject {
+    func showEntryDetails(with model: RedditChildrenData)
+}
 
-extension MainCoordinator {
+extension MainCoordinator: RedditTopEntriesCoordinatorDelegate {
     func showEntryDetails(with model: RedditChildrenData) {
         let viewController = RedditEntryDetailsFactory.make(model: model, coordinatorDelegate: self)
         viewController.title = model.author

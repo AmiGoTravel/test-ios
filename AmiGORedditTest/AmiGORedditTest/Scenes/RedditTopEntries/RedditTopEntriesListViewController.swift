@@ -14,9 +14,7 @@ final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel?.fetchEntries()
-        entriesTableView.tableFooterView = UIView()
-        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
-        entriesTableView.addSubview(refreshControl)
+        configureTableView()
     }
     
     @objc
@@ -29,6 +27,12 @@ final class RedditTopEntriesListViewController: UIViewController, Storyboarded {
         let loadingView = LoadingFooterView()
         loadingView.frame = CGRect(x: 0, y: 0, width: entriesTableView.frame.width, height: 50)
         entriesTableView.tableFooterView = loadingView
+    }
+    
+    private func configureTableView() {
+        entriesTableView.tableFooterView = UIView()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        entriesTableView.addSubview(refreshControl)
     }
 }
 

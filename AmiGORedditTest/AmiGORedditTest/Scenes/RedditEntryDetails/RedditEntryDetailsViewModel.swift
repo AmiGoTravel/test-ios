@@ -5,7 +5,7 @@ protocol RedditEntryDetailsDelegate {
     var title: String { get }
 }
 
-final class RedditEntryDetails {
+final class RedditEntryDetailsViewModel {
     weak var controllerDelegate: RedditEntryDetailsViewProtocol?
     weak var coordinator: MainCoordinator?
     private let entryModel: RedditChildrenData
@@ -18,7 +18,7 @@ final class RedditEntryDetails {
     }
 }
 
-extension RedditEntryDetails: RedditEntryDetailsDelegate {
+extension RedditEntryDetailsViewModel: RedditEntryDetailsDelegate {
     var title: String { entryModel.title }
     
     func requestImage() {
