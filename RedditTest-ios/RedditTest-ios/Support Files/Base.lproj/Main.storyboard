@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Welcome View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="WelcomeViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" customClass="WelcomeViewController" customModule="RedditTest_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-72" y="84"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="PUc-XT-EL6">
+            <objects>
+                <viewController storyboardIdentifier="DetailsViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="dna-ul-xEN" customClass="DetailsViewController" customModule="RedditTest_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6oT-oz-M7y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="..." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wwy-iD-cvY">
+                                <rect key="frame" x="36" y="248" width="258" height="34.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34.5" id="qxN-uR-nMj"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" minimumFontSize="6" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mLJ-cg-r24">
+                                <rect key="frame" x="32" y="340" width="350" height="522"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M3v-Ne-sLZ">
+                                <rect key="frame" x="36" y="306" width="270" height="16"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="220" id="aVW-A6-Jk7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="12"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="comments: ..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eSR-ti-iOK">
+                                <rect key="frame" x="324" y="308" width="53" height="12"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="10"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="1BJ-5G-TAB">
+                                <rect key="frame" x="129" y="76" width="156" height="130"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="130" id="i2Z-ei-cLn"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Pzf-zp-pZO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="1BJ-5G-TAB" firstAttribute="top" secondItem="Pzf-zp-pZO" secondAttribute="top" constant="32" id="3ug-2d-4dw"/>
+                            <constraint firstItem="Wwy-iD-cvY" firstAttribute="leading" secondItem="Pzf-zp-pZO" secondAttribute="leading" constant="36" id="4Jb-if-SST"/>
+                            <constraint firstItem="M3v-Ne-sLZ" firstAttribute="firstBaseline" secondItem="eSR-ti-iOK" secondAttribute="firstBaseline" id="4Mw-6p-Iyl"/>
+                            <constraint firstItem="M3v-Ne-sLZ" firstAttribute="centerY" secondItem="eSR-ti-iOK" secondAttribute="centerY" id="4TJ-ZB-LF2"/>
+                            <constraint firstItem="1BJ-5G-TAB" firstAttribute="centerX" secondItem="mLJ-cg-r24" secondAttribute="centerX" id="DBK-OX-Syf"/>
+                            <constraint firstItem="1BJ-5G-TAB" firstAttribute="centerX" secondItem="6oT-oz-M7y" secondAttribute="centerX" id="K7n-xL-fOx"/>
+                            <constraint firstItem="Wwy-iD-cvY" firstAttribute="top" secondItem="1BJ-5G-TAB" secondAttribute="bottom" constant="42" id="M4V-fk-ujx"/>
+                            <constraint firstItem="Pzf-zp-pZO" firstAttribute="trailing" secondItem="Wwy-iD-cvY" secondAttribute="trailing" constant="120" id="OBX-GV-Zec"/>
+                            <constraint firstItem="Wwy-iD-cvY" firstAttribute="leading" secondItem="M3v-Ne-sLZ" secondAttribute="leading" id="Pob-jo-jlQ"/>
+                            <constraint firstItem="mLJ-cg-r24" firstAttribute="top" secondItem="M3v-Ne-sLZ" secondAttribute="bottom" constant="18" id="ZHA-Ui-anD"/>
+                            <constraint firstItem="1BJ-5G-TAB" firstAttribute="leading" secondItem="Pzf-zp-pZO" secondAttribute="leading" constant="129" id="Zvv-bY-PFo"/>
+                            <constraint firstItem="Pzf-zp-pZO" firstAttribute="trailing" secondItem="eSR-ti-iOK" secondAttribute="trailing" constant="37" id="aWt-xk-Fu6"/>
+                            <constraint firstItem="M3v-Ne-sLZ" firstAttribute="top" secondItem="Wwy-iD-cvY" secondAttribute="bottom" constant="23.5" id="b2w-mG-UEg"/>
+                            <constraint firstItem="mLJ-cg-r24" firstAttribute="leading" secondItem="Pzf-zp-pZO" secondAttribute="leading" constant="32" id="beO-Rw-zcZ"/>
+                            <constraint firstItem="eSR-ti-iOK" firstAttribute="leading" secondItem="M3v-Ne-sLZ" secondAttribute="trailing" constant="18" id="e5Q-Ip-r1F"/>
+                            <constraint firstItem="mLJ-cg-r24" firstAttribute="bottom" secondItem="Pzf-zp-pZO" secondAttribute="bottom" id="xdj-BJ-oQE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="authorLabel" destination="Wwy-iD-cvY" id="1Qq-pX-iGm"/>
+                        <outlet property="commentsLabel" destination="eSR-ti-iOK" id="cm5-BQ-1uW"/>
+                        <outlet property="dateLabel" destination="M3v-Ne-sLZ" id="OEO-Vc-7qL"/>
+                        <outlet property="thumbImageView" destination="1BJ-5G-TAB" id="rq7-6o-owX"/>
+                        <outlet property="titleLabel" destination="mLJ-cg-r24" id="t6V-HF-i20"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HU1-Zq-jr3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1424.6376811594205" y="84.375"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="ivH-eA-J4V">
+            <objects>
+                <viewController storyboardIdentifier="ListViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="HgQ-FM-AQs" customClass="ListViewController" customModule="RedditTest_ios" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZFt-gA-146">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="....." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c4x-D8-OJv">
+                                <rect key="frame" x="94.5" y="68" width="225" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="34" id="a9h-Vz-b9R"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="34" id="b9f-8C-M1k"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="225" id="pUK-L4-5ne"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="GillSans-Bold" family="Gill Sans" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="72" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="eK4-Pe-MOn" customClass="PaginableTableView" customModule="RedditTest_ios" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="126" width="414" height="732"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <inset key="separatorInset" minX="10" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                <sections/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="3QO-d1-fKJ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="3QO-d1-fKJ" firstAttribute="trailing" secondItem="eK4-Pe-MOn" secondAttribute="trailing" id="3RK-hT-VCp"/>
+                            <constraint firstItem="c4x-D8-OJv" firstAttribute="centerX" secondItem="ZFt-gA-146" secondAttribute="centerX" id="85H-Ws-3oH"/>
+                            <constraint firstItem="c4x-D8-OJv" firstAttribute="top" secondItem="3QO-d1-fKJ" secondAttribute="top" constant="24" id="B8K-Su-Lpk"/>
+                            <constraint firstItem="eK4-Pe-MOn" firstAttribute="leading" secondItem="3QO-d1-fKJ" secondAttribute="leading" id="ixw-pG-Loj"/>
+                            <constraint firstItem="3QO-d1-fKJ" firstAttribute="bottom" secondItem="eK4-Pe-MOn" secondAttribute="bottom" constant="4" id="pmR-eF-hzV"/>
+                            <constraint firstItem="eK4-Pe-MOn" firstAttribute="top" secondItem="c4x-D8-OJv" secondAttribute="bottom" constant="24" id="uxC-aI-5Ib"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="listTitleLabel" destination="c4x-D8-OJv" id="gaH-pP-xrb"/>
+                        <outlet property="paginableTableView" destination="eK4-Pe-MOn" id="RWl-Hz-wA6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wYG-u8-mBN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692.75362318840587" y="69.642857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
