@@ -4,9 +4,7 @@ protocol RedditTopEntryCellControllerDelegate: AnyObject {
     func didStartLoadingImage(for model: RedditChildrenData)
     func presentImageData(with data: Data, for model: RedditChildrenData)
     func presentWithDefaultImage(for model: RedditChildrenData)
-    func presentError()
 }
-
 
 final class RedditTopEntryCellController {
     private var cell: RedditTopEntryCell?
@@ -60,10 +58,6 @@ extension RedditTopEntryCellController: RedditTopEntryCellControllerDelegate {
     
     func presentWithDefaultImage(for model: RedditChildrenData) {
         display(model)
-    }
-    
-    func presentError() {
-        print("presentError")
     }
 }
 
