@@ -1,14 +1,14 @@
 @testable import AmiGORedditTest
 
 extension RedditAPIRootModel {
-    static func fixture() -> RedditAPIRootModel {
-        .init(data: RedditDataModel.fixture())
+    static func fixture(after: String = "anyString") -> RedditAPIRootModel {
+        .init(data: RedditDataModel.fixture(after: after))
     }
 }
 
 extension RedditDataModel {
-    static func fixture() -> RedditDataModel {
-        .init(after: "anyString", children: [ChildrenModel.fixture()])
+    static func fixture(after: String) -> RedditDataModel {
+        .init(after: after, children: [ChildrenModel.fixture(), ChildrenModel.fixture()])
     }
 }
 
@@ -23,7 +23,7 @@ extension RedditChildrenData {
         .init(
             title: "anytitle",
             author: "anyAuthor",
-            thumbnail: "anyThumbnail",
+            thumbnail: "https://anyThumbnail.com",
             numComments: 15,
             created: 1231.0
         )
